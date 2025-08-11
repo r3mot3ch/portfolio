@@ -1,0 +1,50 @@
+:root{
+  --bg: #0b0e13;
+  --text: #e8eef6;
+  --muted: #a6b0c3;
+  --card: #121722;
+  --accent: #ffd86b;
+}
+*{ box-sizing:border-box }
+html,body{ margin:0; padding:0; font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color:var(--text); background:var(--bg); line-height:1.6 }
+a{ color:var(--accent); text-decoration:none }
+a[aria-disabled="true"]{ opacity:.5; pointer-events:none }
+.site-header{ border-bottom:1px solid #1b2230 }
+.nav{ display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:1rem 1.25rem; max-width:1100px; margin:0 auto }
+.logo{ font-weight:800; letter-spacing:.08em }
+.menu{ display:flex; gap:1rem; list-style:none; margin:0; padding:0 }
+.nav-toggle{ display:none; background:none; border:1px solid #2a3347; color:var(--text); padding:.4rem .6rem; border-radius:.4rem }
+.hero{ max-width:1100px; margin:2rem auto; padding:2rem 1.25rem }
+.hero h1{ font-size:clamp(2rem, 4vw, 3rem); margin:.2rem 0 0 }
+.kicker{ color:var(--muted); margin:.75rem 0 1rem }
+.cta-row{ display:flex; gap:.75rem; flex-wrap:wrap; margin:1rem 0 }
+.btn{ display:inline-block; padding:.7rem 1rem; border-radius:.6rem; background:var(--accent); color:#111; font-weight:700 }
+.btn.ghost{ background:transparent; color:var(--accent); border:1px solid var(--accent) }
+.btn.small{ padding:.45rem .7rem; font-weight:600 }
+.meta{ color:var(--muted); margin-top:.5rem }
+
+.section{ max-width:1100px; margin:2rem auto; padding:2rem 1.25rem }
+.section h2{ margin:0 0 1rem }
+.grid{ display:grid; grid-template-columns:repeat(12,1fr); gap:1rem }
+.card{ grid-column:span 6; background:var(--card); border:1px solid #1b2230; border-radius:.8rem; padding:1rem }
+.card h3{ margin:.3rem 0 .4rem }
+.tags{ list-style:none; display:flex; gap:.5rem; padding:0; margin:.5rem 0 1rem }
+.tags li{ font-size:.85rem; color:#111; background:var(--accent); border-radius:999px; padding:.2rem .6rem }
+.links{ display:flex; gap:.75rem }
+
+.resume-list{ line-height:1.9 }
+.contact-form{ display:grid; gap:.75rem; max-width:600px }
+.contact-form input, .contact-form textarea{
+  width:100%; background:#0f141d; border:1px solid #26304a; color:var(--text);
+  border-radius:.5rem; padding:.6rem .75rem
+}
+.contact-form button{ justify-self:start }
+.social a{ color:var(--muted) }
+
+.site-footer{ border-top:1px solid #1b2230; padding:1.25rem; text-align:center; color:var(--muted) }
+
+@media (max-width:800px){
+  .card{ grid-column:span 12 }
+  .menu{ display:none }
+  .nav-toggle{ display:block }
+}
